@@ -30,4 +30,7 @@ Route::get('/users', ['as' => 'user','uses' => 'App\Http\Controllers\web\UserCon
 Route::get('/movies', ['as' => 'movie','uses' => 'App\Http\Controllers\web\MoviesController@index',]);
 Route::get('/addmovie', ['as' => 'addmovie','uses' => 'App\Http\Controllers\web\MoviesController@create',]);
 Route::post('/movieStore', ['uses' => 'App\Http\Controllers\web\MoviesController@store',])->name('addmoviepage');
+Route::get('/movieview/{id}' ,['uses' => 'App\Http\Controllers\web\MoviesController@show',])->name('movieview');
+Route::get('/movieedit/{id}', ['uses' => 'App\Http\Controllers\web\MoviesController@edit',])->name('movieedit');
+Route::post('/movieupdate/{id}', ['uses' => 'App\Http\Controllers\web\MoviesController@update',])->name('movieupdate');
 Route::get('/movie/destroy/{id}', ['as' => 'moviedelete','uses' => 'App\Http\Controllers\web\MoviesController@destroy',]);

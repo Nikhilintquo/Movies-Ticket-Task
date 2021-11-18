@@ -23,7 +23,7 @@
                 @endif
             </div>
             <div class="col-md-12">
-                <table id="examplethree" class="table table-striped table-bordered" style="width:100%">
+                <table id="examplethree" class="table table-striped table-bordered table-responsive" style="width:100%">
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -42,18 +42,22 @@
                                 <img src="../.<?php
                                 echo $movie[$i]["coverImage"]
                                   ?>"
-                                    width="100%" height="auto" style="border-radius:5px;" />
+                                    width="50%" height="auto" style="border-radius:5px;" />
                             </td>
                             <td>
                                 <img src="../.<?php
                                 echo $movie[$i]["bannerImage"]
                                   ?>"
-                                    width="100%" height="auto" style="border-radius:5px;" />
+                                    width="50%" height="auto" style="border-radius:5px;" />
                             </td>
                             <td>{{ $movie[$i]["ticketPrice"] }}</td>
                             <td>{{ $movie[$i]["place"] }}</td>
                             <td>{{ $movie[$i]["status"] }}</td>
                             <td>
+                                <a class="btn btn-primary btn-just-icon btn-round btn-sm" id="view" href="{{ route('movieview',$movie[$i]["id"]) }}"><i
+                                    class="fas fa-eye"></i></a>
+                                <a class="btn btn-success btn-just-icon btn-round btn-sm" id="edit" href="{{ route('movieedit',$movie[$i]["id"]) }}"><i
+                                        class="fas fa-edit"></i></a>
                                 <a class="btn btn-danger btn-just-icon btn-round btn-sm"
                                 href="{{ route('moviedelete',$movie[$i]["id"]) }}"><i class="fas fa-trash-alt"></i></a>
                             </td>

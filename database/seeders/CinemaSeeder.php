@@ -17,12 +17,12 @@ class CinemaSeeder extends Seeder
     {
         //
         DB::table('cinema')->insert([
-            'cinema name' => 'Avengers Endgame',
+            'cinema name' => 'PVR Cinemas (Phoenix Market City Mall)',
             'place' => 'Pune',
         ]);
 
         DB::table('cinema')->insert([
-            'cinema name' => 'Iron Man',
+            'cinema name' => 'Cinepolis Cinemas (Imperial Square Mall)',
             'place' => 'Surat',
         ]);
     }
