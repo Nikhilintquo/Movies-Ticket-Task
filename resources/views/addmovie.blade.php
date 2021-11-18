@@ -13,13 +13,13 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="">Cover Image</label>
-                        <input type="file" class="form-control" name="coverImage" required>
+                        <input type="file" class="form-control" name="coverImage" value required>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="">Banner Image</label>
-                        <input type="file" class="form-control" name="bannerImage" required>
+                        <input type="file" class="form-control" name="bannerImage" value required>
                     </div>
                 </div>
                 <div class="col-md-6">

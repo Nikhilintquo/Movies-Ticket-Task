@@ -14,7 +14,7 @@
                     <div class="form-group">
                         <label for="">Cover Image</label>
                         <br>
-                        <img src=".{{$movie->coverImage}}" width="50%" alt="Menu image" style="border-radius: 3">
+                        <img src=".{{$movie->coverImage}}" width="50%" alt="" style="border-radius: 3">
                         <input type="file" value=".{{$movie->coverImage}}" class="form-control" name="coverImage">
                     </div>
                 </div>
@@ -22,7 +22,7 @@
                     <div class="form-group">
                         <label for="">Banner Image</label>
                         <br>
-                        <img src=".{{$movie->bannerImage}}" width="50%" alt="Menu image" style="border-radius: 3">
+                        <img src=".{{$movie->bannerImage}}" width="50%" alt="" style="border-radius: 3">
                         <input type="file" value=".{{$movie->bannerImage}}" class="form-control" name="bannerImage">
                     </div>
                 </div>

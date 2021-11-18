@@ -198,8 +198,8 @@ class MoviesController extends Controller
         //
         $movie = Movie::where('id',$id)->first();
 
-        $movie->coverImage = $request->coverImage;
-        $movie->bannerImage = $request->bannerImage;
+        // $movie->coverImage = $request->coverImage;
+        // $movie->bannerImage = $request->bannerImage;
         $movie->name = $request->name;
         $movie->ticketPrice = $request->ticketPrice;
         $movie->place = $request->place;
@@ -209,7 +209,7 @@ class MoviesController extends Controller
         // var_dump($request->hasFile('coverImage'));
         // exit();
         // Cover Image Store
-        if ($request->hasFile('coverImage') && $_FILES['coverImage']['name'] != '') {
+        if ($request->hasFile('coverImage')) {
         $filename = $_FILES['coverImage']['name'];
         $temp = $_FILES['coverImage']['tmp_name'];
 
@@ -254,7 +254,7 @@ class MoviesController extends Controller
             imagejpeg($thumb,$file_large);
         }
     }
-    if ($request->hasFile('bannerImage') && $_FILES['bannerImage']['name'] != '') {
+    if ($request->hasFile('bannerImage')) {
 
         // Banner Image Store
         $filename = $_FILES['bannerImage']['name'];
@@ -302,7 +302,7 @@ class MoviesController extends Controller
         }
 
     }
-        $movie->save();
+        $movie->update();
 
         $movie = Movie::all();
 
